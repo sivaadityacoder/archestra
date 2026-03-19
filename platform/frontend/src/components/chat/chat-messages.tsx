@@ -52,6 +52,7 @@ import {
 import { useMcpInstallOrchestrator } from "@/lib/mcp-install-orchestrator.hook";
 import { useOrganization } from "@/lib/organization.query";
 import { hasThinkingTags, parseThinkingTags } from "@/lib/parse-thinking";
+import type { ModelSource } from "@/lib/use-chat-preferences";
 import { cn } from "@/lib/utils";
 import { AuthRequiredTool } from "./auth-required-tool";
 import {
@@ -100,6 +101,9 @@ interface ChatMessagesProps {
     approved: boolean;
     reason?: string;
   }) => void;
+  agentName?: string;
+  selectedModel?: string;
+  modelSource?: ModelSource | null;
 }
 
 // Type guards for tool parts
@@ -133,6 +137,9 @@ export function ChatMessages({
   onUserMessageEdit,
   error = null,
   onToolApprovalResponse,
+  agentName,
+  selectedModel,
+  modelSource,
 }: ChatMessagesProps) {
   const isStreamingStalled = useStreamingStallDetection(messages, status);
   const { data: session } = useSession();
@@ -784,6 +791,9 @@ export function ChatMessages({
               error={error}
               conversationId={conversationId}
               supportMessage={organization?.chatErrorSupportMessage}
+              agentName={agentName}
+              selectedModel={selectedModel}
+              modelSource={modelSource}
             />
           )}
           {pendingToolCalls.map((toolCall) => (
