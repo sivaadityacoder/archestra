@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.1.34](https://github.com/archestra-ai/archestra/compare/platform-v1.1.33...platform-v1.1.34) (2026-03-20)
+
+
+### Bug Fixes
+
+* bring back chat autoscroll ([#3480](https://github.com/archestra-ai/archestra/issues/3480)) ([c22e87d](https://github.com/archestra-ai/archestra/commit/c22e87d2f2ffbf261e6fc90b8508e1a6edce3563))
+* tighten agent builder MCP assignment and chat tool state handling ([#3477](https://github.com/archestra-ai/archestra/issues/3477)) ([4b15ac8](https://github.com/archestra-ai/archestra/commit/4b15ac807d6282cfd9ed708f83e20dbc227e510e))
+
+
+### Dependencies
+
+* bump @microsoft/msgraph-sdk-users from 1.0.0-preview.77 to 1.0.0-preview.80 in /platform ([#3479](https://github.com/archestra-ai/archestra/issues/3479)) ([5179285](https://github.com/archestra-ai/archestra/commit/5179285a6ab83124f18a5f5537a122a57e13f595))
+
 ## [1.1.33](https://github.com/archestra-ai/archestra/compare/platform-v1.1.32...platform-v1.1.33) (2026-03-19)
 
 
